@@ -10,7 +10,7 @@ const TodoItem = ({ id, title, onCheck }: TodoItemProps) => {
   };
 
   return (
-    <div className="w-16" onClick={deleteTodo}>
+    <div className="dark:text-neutral-400" onClick={deleteTodo}>
       <label>{title}</label>
     </div>
   );

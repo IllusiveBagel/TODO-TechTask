@@ -21,19 +21,38 @@ function App() {
 
   return (
     <>
-      {todos.map((todo) => (
-        <TodoItem id={todo.id} title={todo.title} onCheck={handleDeleteTodo} />
-      ))}
-      <form onSubmit={handleAddTodo}>
-        <input
-          type="text"
-          value={input}
-          onInput={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setInput(e.target.value)
-          }
-        />
-        <button type="submit">Add</button>
-      </form>
+      <div className="flex h-screen w-screen items-center justify-center bg-neutral-100 dark:bg-slate-800">
+        <div className="h-3/4 w-1/3 rounded-2xl bg-white shadow-lg dark:bg-slate-900">
+          <form
+            className="mx-auto mt-4 flex h-16 w-3/4 items-center justify-center rounded-full border-2 border-indigo-500 dark:border-sky-800 dark:text-neutral-400"
+            onSubmit={handleAddTodo}
+          >
+            <input
+              type="text"
+              className="h-full w-[calc(100%-6rem)] rounded-l-[28px] bg-transparent pl-2.5"
+              value={input}
+              onInput={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setInput(e.target.value)
+              }
+            />
+            <button
+              type="submit"
+              className="h-full w-24 rounded-r-[28px] bg-indigo-500 dark:bg-sky-800"
+            >
+              ADD
+            </button>
+          </form>
+
+          {todos.map((todo) => (
+            <TodoItem
+              id={todo.id}
+              title={todo.title}
+              onCheck={handleDeleteTodo}
+              key={todo.id}
+            />
+          ))}
+        </div>
+      </div>
     </>
   );
 }

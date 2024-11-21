@@ -23,6 +23,7 @@ export const todoSlice = createSlice({
 
       state.todos.push(todo);
     },
+    // This is currently unused but with more time this would be part of an edit menu
     removeTodo: (state, action: PayloadAction<number>) => {
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
     },

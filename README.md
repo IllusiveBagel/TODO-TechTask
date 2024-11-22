@@ -1,50 +1,27 @@
-# React + TypeScript + Vite
+# Todo list Tech Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple todo list web page built using React,Typescript,Redux and Tailwind. In it's current state the app allows the user to enter a simple todo item via the input field at the top these are then added to the active tab, once a user clicks on the item it is then moved to the completed tab. Every change that is made will sync the data to the browsers localStorage meaning nothing is lost if the tab is closed or refreshed.
 
-Currently, two official plugins are available:
+## How to Run
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+first step is to clone down the repo and install all the dependencies which can be done by:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+git clone https://github.com/IllusiveBagel/TODO-TechTask.git
+cd TODO-TechTask
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+once the repo has been cloned and all dependencies have finished installing the project can be run by:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
+npm run dev
+```
+
+you should then see a url in the terminal that can be followed to see the running site.
+
+## Potential expansions and improvements
+
+If I was to put more time into this I would love to add more details to the items for example a place to add notes to the todo item or a priority or deadline this can then be filtered and have different styling added to make items that are nearing the deadline or higher priority more obvious to the user.
+
+I am quite new to tailwind so if I had more time I would be able to better use it to give a nicer overall look and feel potentially include some simple animations to give it a more responsive feel.

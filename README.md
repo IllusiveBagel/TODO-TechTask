@@ -25,3 +25,5 @@ you should then see a url in the terminal that can be followed to see the runnin
 If I was to put more time into this I would love to add more details to the items for example a place to add notes to the todo item or a priority or deadline this can then be filtered and have different styling added to make items that are nearing the deadline or higher priority more obvious to the user.
 
 I am quite new to tailwind so if I had more time I would be able to better use it to give a nicer overall look and feel potentially include some simple animations to give it a more responsive feel.
+
+In terms of the repo itself I could host it using github pages and get it to publish with each commit or release using github actions. Similar to what I have done on my [portfolio repo](https://github.com/IllusiveBagel/IllusiveBagel.github.io)
